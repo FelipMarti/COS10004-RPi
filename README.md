@@ -20,7 +20,7 @@ ARM assembly programming using RPi for Computer Systems (COS10004) at Swinburne 
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47\Omega)
+- a few resistors (47Ω)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - micro HDMI (male) adapter to computer lab screens (normally DVI)
@@ -39,7 +39,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47\Omega)
+- a few resistors (47Ω)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - HDMI (male) adapter to computer lab screens (normally DVI)
@@ -57,7 +57,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 ### RPi 3B micro SD card files
 - [start.elf](https://github.com/raspberrypi/firmware/blob/master/boot/start.elf)
 - [bootcode.bin](https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin)
-- [kernel.img](3B/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
+- [kernel.img](2B-3B/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
 
 
 ## RPi 2B
@@ -67,7 +67,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47\Omega)
+- a few resistors (47Ω)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - HDMI (male) adapter to computer lab screens (normally DVI)
@@ -76,6 +76,6 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 ### RPi 2B v1.2 SD card files
 - [start.elf](https://github.com/raspberrypi/firmware/blob/master/boot/start.elf)
 - [bootcode.bin](https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin)
-- [kernel.img]() - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
+- [kernel.img](2B-3B/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
 
 
