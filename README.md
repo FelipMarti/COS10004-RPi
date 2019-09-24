@@ -47,7 +47,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 ### RPi 3B+ micro SD card files
 - [start.elf](https://github.com/raspberrypi/firmware/blob/master/boot/start.elf)
 - [bootcode.bin](https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin)
-- [kernel.img]() - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
+- [kernel.img](2B-3B-3Bplus/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
 
 
 ## RPi 3B
@@ -57,7 +57,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 ### RPi 3B micro SD card files
 - [start.elf](https://github.com/raspberrypi/firmware/blob/master/boot/start.elf)
 - [bootcode.bin](https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin)
-- [kernel.img](2B-3B/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
+- [kernel.img](2B-3B-3Bplus/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
 
 
 ## RPi 2B v1.2
@@ -76,6 +76,47 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 ### RPi 2B v1.2 SD card files
 - [start.elf](https://github.com/raspberrypi/firmware/blob/master/boot/start.elf)
 - [bootcode.bin](https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin)
-- [kernel.img](2B-3B/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
+- [kernel.img](2B-3B-3Bplus/kernel.img) - Writes 1 to GPIO18 pin (Will turn on an LED correctly connected to GPIO18)
 
 
+## First steps
+The first step is to check that you circuit works. 
+Wire your circuit, put the provided files in the SD card, and power your RPi.
+If the LED connected to GPIO18 turns on, your can continue with the lab.
+If not, check if you are doing some of the typical errors:
+
+- Wrong format of the SD card
+- Wrong files in the SD card
+- LED wrong connection (reversed polarity)
+- Wrong wiring
+- Wrong GPIO connected
+
+### SD card format
+If the SD card doesn't have a FAT32 bootable partition, it won't work.
+
+- 1 single partition
+- FAT32
+- Bootable partition
+
+
+## Compiler
+
+We will use the ARM assembly compiler [FASMARM](http://arm.flatassembler.net/) running under GNU/Linux, and windows.
+
+
+### GNU/Linux
+You can use the binary from the [full package](http://arm.flatassembler.net/FASMARM_full.ZIP) download, or use the binary provided in this [repo](Compiler/fasmarm). 
+To compile your code execute the following command:
+
+`./fasmarm test_RPI.asm `
+
+It will generate a binary file if it compiles without any errors.
+No compilation errors are indicated like this:
+
+```
+flat assembler for ARM  version 1.43 (built on fasm 1.73.02)  (16384 kilobytes memory)
+1 passes, 36 bytes.
+```
+
+### macOS
+Not sure, but the GNU/Linux way should also work.
