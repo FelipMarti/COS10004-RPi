@@ -111,7 +111,7 @@ The following steps show how to format properly the SD card in GNU/Linux:
     * X is the letter where your sd card is connected (probably not "a", be careful). In this example is "b"
     * Y is the number of the partition. You need to umount all the partitions from 1-N
 
-4. Execute `fdisk /dev/sdX'
+4. Execute `fdisk /dev/sdX`
     * In fdisk you should delete all the partitions, command **d**
     * Create a single partition, command **n**
     * Make the partition bootable, command **a**
