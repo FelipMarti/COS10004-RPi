@@ -119,4 +119,4 @@ flat assembler for ARM  version 1.43 (built on fasm 1.73.02)  (16384 kilobytes m
 ```
 
 ### macOS
-Not sure, but the GNU/Linux way should also work.
+[Wine](https://www.winehq.org/) is probably the best option.
