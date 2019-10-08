@@ -103,12 +103,9 @@ The following steps show how to format properly the SD card in GNU/Linux:
 
 1. Plug the USB
 2. Execute `dmesg `
-
-> This will tell you the name of your device. For example *sdb*:
-
-> `[836119.568253] sd 4:0:0:0: [sdb] Attached SCSI removable disk`
-
-> Some distros (such Arch Linux) might use *mmcblkXpY* notation
+    * This will tell you the name of your device. For example *sdb*:
+    * `[836119.568253] sd 4:0:0:0: [sdb] Attached SCSI removable disk`
+    * Some distros (such Arch Linux) might use *mmcblkXpY* notation
 
 3. Umount all the partitions of the usb `umount /dev/sdXY`
     * X is the letter where your sd card is connected (probably not "a", be careful). In this example is "b"
