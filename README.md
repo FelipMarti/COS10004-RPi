@@ -20,7 +20,7 @@ ARM assembly programming using RPi for Computer Systems (COS10004) at Swinburne 
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47Ω or more)
+- a few resistors (between 47Ω and 330Ω approx.)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - micro HDMI (male) adapter to computer lab screens (normally DVI)
@@ -39,7 +39,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47Ω or more)
+- a few resistors (between 47Ω and 330Ω approx.)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - HDMI (male) adapter to computer lab screens (normally DVI)
@@ -67,7 +67,7 @@ Note that bootcode.bin is not required for RPi 4 because it is included in the [
 - micro SD card adapter for computer
 - breadboard
 - a few LEDs 
-- a few resistors (47Ω or more)
+- a few resistors (between 47Ω and 330Ω approx.)
 - a few cables to connect from GPIO pins (female) to the breadboard (male)
 - electronic buttons (for the I/O labs)
 - HDMI (male) adapter to computer lab screens (normally DVI)
@@ -97,6 +97,34 @@ If the SD card doesn't have a FAT32 bootable partition, it won't work.
 - 1 single partition
 - FAT32
 - Bootable partition
+
+#### How to format the SD card
+The following steps show how to format properly the SD card in GNU/Linux:
+
+1. Plug the USB
+2. Execute `dmesg `
+
+> This will tell you the name of your device. For example *sdb*:
+
+> `[836119.568253] sd 4:0:0:0: [sdb] Attached SCSI removable disk`
+
+> Some distros (such Arch Linux) might use *mmcblkXpY* notation
+
+3. Umount all the partitions of the usb `umount /dev/sdXY`
+    * X is the letter where your sd card is connected (probably not "a", be careful). In this example is "b"
+    * Y is the number of the partition. You need to umount all the partitions from 1-N
+
+4. Execute `fdisk /dev/sdX'
+    * In fdisk you should delete all the partitions, command **d**
+    * Create a single partition, command **n**
+    * Make the partition bootable, command **a**
+    * Change the partition type (command **t**) to "W95 FAT32" which is option **b**
+    * Write the changes **w**
+    * Exit fdisk **q**
+
+5. Create an MS-DOS filesystem `mkfs.vfat /dev/sdX1`
+
+6. Add the SD card files provided for your RPi to test it
 
 
 ## Compiler
