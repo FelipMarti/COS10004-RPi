@@ -7,7 +7,7 @@ ARM assembly programming using RPi for Computer Systems (COS10004) at Swinburne 
 |        RPi Model        |     2B     |   2B v1.2  |     3B     |     3B+    |     4B     |
 |:-----------------------:|:----------:|:----------:|:----------:|:----------:|:----------:|
 |           SoC           |   BCM2836  |   BCM2837  |   BCM2837  |  BCM2837B0 |   BCM2711  |
-|          Memory         |    512MB   |     1GB    |     1GB    |     1GB    |   1/2/4GB  |
+|          Memory         |    512MB   |     1GB    |     1GB    |     1GB    | 1/2/4/8GB  |
 | Peripheral Base address | 0x20000000 | 0x3F000000 | 0x3F000000 | 0x3F000000 | 0xFE000000 |
 |       GPIO Offset       |  0x200000  |  0x200000  |  0x200000  |  0x200000  |  0x200000  |
 |                         |            |            |            |            |            |
